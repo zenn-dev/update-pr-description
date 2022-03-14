@@ -6,7 +6,7 @@ const run = async () => {
   const prTitle = core.getInput('pr_title');
   const prBody = core.getInput('pr_body');
   const baseBranch = core.getInput('destination_branch');
-  const sourceBranch = github.context.ref.replace(/^refs\/heads\//, '');
+  const sourceBranch = core.getInput('source_branch') || github.context.ref.replace(/^refs\/heads\//, '');
 
   const credentials = {
     owner: github.context.repo.owner,
