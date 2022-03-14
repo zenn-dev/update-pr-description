@@ -15,6 +15,9 @@ inputs:
   pr_body:
     description: 'The body of the PR'
     default: ''
+  source_branch:
+    description: 'Source branch of the PR.'
+    default: ''
   destination_branch:
     description: 'Base branch of the PR. Default is master.'
     default: master
